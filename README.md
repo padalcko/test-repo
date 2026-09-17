@@ -72,9 +72,9 @@ The choice is stored locally. Revocation disables subsequent analytics; it does
 not delete data already sent. Google Fonts and embedded maps still connect to
 Google when their resources load.
 
-The source pages disagree on the street: the homepage uses `Rybaki 7`, while
-contact uses `Rybacka 7`. These existing business details were preserved and
-need the owner's confirmation before changing them.
+The confirmed LTS Market address is `Rybacka 7, Wrocław`. Homepage and
+contact text, embedded maps and structured data use this address in all three
+languages.
 
 No deployment was performed. Browser visual/mobile QA was unavailable in the
 editing environment; the checks above do not substitute for a visual review.
