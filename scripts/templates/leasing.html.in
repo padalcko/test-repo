@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="index, follow, max-image-preview:large">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/leasing.css">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Leasing urządzeń kosmetycznych",
+        "description": "Indywidualnie dobierane finansowanie profesjonalnych urządzeń dla branży beauty.",
+        "provider": {
+          "@type": "Organization",
+          "name": "LTS Market",
+          "url": "https://ltsmarket.pl/"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Polska"
+        },
+        "url": "https://ltsmarket.pl/leasing.html"
+      }
+    </script>
+
+<title>Leasing urządzeń kosmetycznych | LTS Market</title>
+<meta name="description" content="Leasing urządzeń kosmetycznych i laserów. Indywidualnie dobieramy warunki finansowania dla każdego klienta i współpracujemy z bankami oraz firmami leasingowymi w całej Polsce.">
+
+</head>
+
+  <body>
+    <a class="skip-link" href="#main-content"> Przejdź do treści </a>
+
+    <!-- SITE_HEADER -->
+
+    <main id="main-content">
+
+      <section class="leasing-hero">
+        <div class="container leasing-hero__container">
+          <div class="leasing-hero__content">
+            <p class="section-label leasing-hero__label">Leasing urządzeń</p>
+
+            <h1 class="leasing-hero__title">
+              Finansowanie dopasowane
+              <span>do Twojej firmy</span>
+            </h1>
+
+            <p class="leasing-hero__description">
+              Nie oferujemy jednego gotowego pakietu leasingowego. Dla każdego
+              klienta indywidualnie dobieramy warunki finansowania wybranego
+              urządzenia.
+            </p>
+
+            <p class="leasing-hero__description">
+              Współpracujemy z bankami i firmami leasingowymi w całej Polsce.
+            </p>
+
+            <div class="leasing-hero__actions">
+              <a class="button button--primary" href="/kontakt.html">
+                Zapytaj o leasing
+              </a>
+
+              <a class="leasing-hero__phone" href="tel:+48575254431">
+                +48 575 254 431
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="leasing-info">
+        <div class="container leasing-info__grid">
+          <div class="leasing-info__heading">
+            <p class="section-label">Indywidualne podejście</p>
+
+            <h2 class="leasing-section-title">
+              Każdy klient.
+              <span>Inne warunki.</span>
+            </h2>
+          </div>
+
+          <div class="leasing-info__content">
+            <p class="leasing-info__lead">
+              Nie ma jednej oferty leasingowej odpowiedniej dla wszystkich firm.
+            </p>
+
+            <p>
+              Warunki finansowania zależą między innymi od wybranego urządzenia,
+              wartości inwestycji, sytuacji firmy, wysokości wkładu własnego
+              oraz planowanego okresu leasingu.
+            </p>
+
+            <p>
+              Dlatego zamiast proponować jeden schemat, sprawdzamy dostępne
+              możliwości i pomagamy znaleźć rozwiązanie odpowiednie dla
+              konkretnego klienta.
+            </p>
+
+            <div class="leasing-info__points">
+              <span>Różny wkład własny</span>
+              <span>Różny okres finansowania</span>
+              <span>Różne instytucje finansujące</span>
+              <span>Warunki dobierane indywidualnie</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="leasing-steps">
+        <div class="container">
+          <div class="leasing-steps__heading">
+            <p class="section-label">Jak to działa</p>
+
+            <h2>Prosty proces</h2>
+          </div>
+
+          <div class="leasing-steps__grid">
+
+            <article class="leasing-step">
+              <div class="leasing-step__icon" aria-hidden="true">
+                <svg viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="12" y="5" width="24" height="32" rx="2">
+                  <rect x="17" y="10" width="14" height="10" rx="1">
+                  <path d="M18 26H30">
+                  <path d="M24 37V43">
+                  <path d="M18 43H30">
+                </svg>
+              </div>
+
+              <div>
+                <h3>Wybierasz urządzenie</h3>
+
+                <p>Wybieramy sprzęt odpowiedni dla Twojego gabinetu.</p>
+              </div>
+            </article>
+
+            <article class="leasing-step">
+              <div class="leasing-step__icon" aria-hidden="true">
+                <svg viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 18L24 8L42 18">
+                  <path d="M9 20H39">
+                  <path d="M12 20V36">
+                  <path d="M20 20V36">
+                  <path d="M28 20V36">
+                  <path d="M36 20V36">
+                  <path d="M8 36H40">
+                  <path d="M6 40H42">
+                </svg>
+              </div>
+
+              <div>
+                <h3>Dobieramy finansowanie</h3>
+
+                <p>Sprawdzamy dostępne możliwości i warunki finansowania.</p>
+              </div>
+            </article>
+
+            <article class="leasing-step">
+              <div class="leasing-step__icon" aria-hidden="true">
+                <svg viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 5H30L38 13V43H11V5Z">
+                  <path d="M30 5V13H38">
+                  <path d="M17 21H32">
+                  <path d="M17 27H32">
+                  <path d="M17 33H25">
+                  <path d="M27 36L30 39L36 32">
+                </svg>
+              </div>
+
+              <div>
+                <h3>Finalizujesz zakup</h3>
+
+                <p>
+                  Po akceptacji warunków przechodzimy do realizacji zamówienia.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="leasing-cta">
+        <div class="container leasing-cta__grid">
+          <div class="leasing-cta__content">
+            <p class="section-label">Leasing LTS Market</p>
+
+            <h2>
+              Chcesz poznać warunki
+              <span>dla Twojej firmy?</span>
+            </h2>
+
+            <p>
+              Skontaktuj się z nami. Powiedz, jakie urządzenie Cię interesuje, a
+              sprawdzimy dostępne możliwości finansowania.
+            </p>
+          </div>
+
+          <div class="leasing-cta__actions">
+            <a class="button button--primary" href="/kontakt.html">
+              Zapytaj o leasing
+            </a>
+
+            <a class="leasing-cta__contact" href="tel:+48575254431">
+              <span>Telefon</span>
+              <strong>+48 575 254 431</strong>
+            </a>
+
+            <a class="leasing-cta__contact" href="mailto:sales@ltsmarket.pl">
+              <span>E-mail</span>
+              <strong>sales@ltsmarket.pl</strong>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- SITE_FOOTER -->
+
+    <script src="/js/main.js" defer></script>
+  <script src="/js/privacy.js" defer></script></body>
+</html>

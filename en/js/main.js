@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     menuToggle.setAttribute("aria-expanded", "true");
 
-    menuToggle.setAttribute("aria-label", "Zamknij menu");
+    menuToggle.setAttribute("aria-label", "Close menu");
 
     body.classList.add("menu-open");
   };
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     menuToggle.setAttribute("aria-expanded", "false");
 
-    menuToggle.setAttribute("aria-label", "Otwórz menu");
+    menuToggle.setAttribute("aria-label", "Open menu");
 
     body.classList.remove("menu-open");
   };
@@ -395,7 +395,7 @@ document.addEventListener("DOMContentLoaded", () => {
       !getTrimmedValue(email) ||
       !getTrimmedValue(phone)
     ) {
-      setFormStatus("Uzupełnij wszystkie wymagane pola.", "error");
+      setFormStatus("Complete all required fields.", "error");
 
       return false;
     }
@@ -405,7 +405,7 @@ document.addEventListener("DOMContentLoaded", () => {
     */
 
     if (email && !email.checkValidity()) {
-      setFormStatus("Podaj poprawny adres e-mail.", "error");
+      setFormStatus("Enter a valid email address.", "error");
 
       email.focus();
 
@@ -422,7 +422,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const phonePattern = /^[+()0-9\s-]{7,25}$/;
 
     if (!phonePattern.test(phoneValue)) {
-      setFormStatus("Podaj poprawny numer telefonu.", "error");
+      setFormStatus("Enter a valid phone number.", "error");
 
       phone.focus();
 
@@ -435,7 +435,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!privacy || !privacy.checked) {
       setFormStatus(
-        "Aby wysłać zapytanie, zaakceptuj zgodę na przetwarzanie danych.",
+        "To send an enquiry, please consent to data processing.",
         "error",
       );
 
@@ -500,7 +500,7 @@ document.addEventListener("DOMContentLoaded", () => {
         */
 
       setFormStatus(
-        "Formularz jest gotowy. Wysyłkę uruchomimy po podłączeniu systemu zgłoszeń.",
+        "Online sending is not available yet. Please email sales@ltsmarket.pl or call +48 575 254 431.",
         "info",
       );
     });

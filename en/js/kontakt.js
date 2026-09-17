@@ -240,7 +240,7 @@ async function handleSubmit(event) {
   const isValid = validateForm();
 
   if (!isValid) {
-    showStatus("Sprawdź wymagane pola i popraw dane w formularzu.", "error");
+    showStatus("Check the required fields and correct the form details.", "error");
 
     const firstInvalid = contactForm.querySelector(
       ".is-invalid, [aria-invalid='true']",
@@ -263,7 +263,7 @@ async function handleSubmit(event) {
 
   if (submitButton) {
     submitButton.disabled = true;
-    submitButton.textContent = "Wysyłanie...";
+    submitButton.textContent = "Sending...";
   }
 
   try {
@@ -277,7 +277,7 @@ async function handleSubmit(event) {
 
     if (!result.configured) {
       showStatus(
-        "Formularz jest gotowy. Wysyłka zostanie uruchomiona po podłączeniu systemu kontaktowego.",
+        "Online sending is not available yet. Please email sales@ltsmarket.pl or call +48 575 254 431.",
         "",
       );
 
@@ -287,7 +287,7 @@ async function handleSubmit(event) {
     /* SUCCESS */
 
     showStatus(
-      "Dziękujemy. Twoje zapytanie zostało wysłane. Skontaktujemy się z Tobą.",
+      "Thank you. Your enquiry has been sent. We will contact you.",
       "success",
     );
 
@@ -310,7 +310,7 @@ async function handleSubmit(event) {
     console.error("LTS Market contact form error:", error);
 
     showStatus(
-      "Nie udało się wysłać formularza. Spróbuj ponownie lub skontaktuj się z nami telefonicznie.",
+      "The form could not be sent. Try again or contact us by phone.",
       "error",
     );
   } finally {

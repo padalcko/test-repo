@@ -1,0 +1,84 @@
+<header class="site-header" id="site-header">
+      <div class="container header__container">
+        <a class="brand" href="/" aria-label="LTS Market — strona główna">
+          <span class="brand__name"> LTS <strong>MARKET</strong> </span>
+
+          <span class="brand__subtitle"> PROFESSIONAL BEAUTY EQUIPMENT </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Główna nawigacja">
+          <a class="desktop-nav__link is-active" href="/" aria-current="page"> Market </a>
+
+          <a class="desktop-nav__link" href="/nowe.html"> Nowe </a>
+
+          <a class="desktop-nav__link" href="/uzywane.html"> Używane </a>
+
+          <a class="desktop-nav__link" href="/leasing.html"> Leasing </a>
+
+          <a class="desktop-nav__link" href="https://lasertechservice.pl/">
+            Serwis
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="desktop-nav__link" href="https://lasertechservice.pl/blog/"> Blog </a>
+
+          <a class="desktop-nav__link" href="/kontakt.html"> Kontakt </a>
+        </nav>
+
+        <div class="language-switcher">
+          <button class="language-switcher__button" id="language-button" type="button" aria-expanded="false" aria-controls="language-menu"><span aria-hidden="true">🇵🇱</span><span>PL</span><span class="language-switcher__chevron" aria-hidden="true">▾</span></button>
+
+          <div class="language-switcher__menu" id="language-menu" hidden>
+            <a class="language-switcher__option is-active" href="/" lang="pl" aria-current="page">
+              <span aria-hidden="true">🇵🇱</span>
+              <span>PL</span>
+            </a>
+
+            <a class="language-switcher__option" href="/en/" lang="en">
+              <span aria-hidden="true">🇬🇧</span>
+              <span>EN</span>
+            </a>
+
+            <a class="language-switcher__option" href="/ru/" lang="ru">
+              <span aria-hidden="true">🇷🇺</span>
+              <span>RU</span>
+            </a>
+          </div>
+        </div>
+
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <nav class="mobile-menu__nav" aria-label="Menu mobilne">
+          <a href="/">Market</a>
+          <a href="/nowe.html">Nowe</a>
+          <a href="/uzywane.html">Używane</a>
+          <a href="/leasing.html">Leasing</a>
+
+          <a href="https://lasertechservice.pl/">
+            Serwis
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a href="https://lasertechservice.pl/blog/">Blog</a>
+          <a href="/kontakt.html">Kontakt</a>
+        </nav>
+
+        <div class="mobile-menu__languages">
+          <span class="mobile-menu__languages-label"> Język </span>
+
+          <div class="mobile-menu__languages-list">
+            <a class="is-active" href="/" lang="pl" aria-current="page"> 🇵🇱 PL </a>
+
+            <a href="/en/" lang="en" class=""> 🇬🇧 EN </a>
+
+            <a href="/ru/" lang="ru" class=""> 🇷🇺 RU </a>
+          </div>
+        </div>
+      </div>
+    </header>
