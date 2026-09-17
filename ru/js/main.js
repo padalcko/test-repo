@@ -2,7 +2,7 @@
 
 /* ============================================================
    LTS MARKET
-   main.js
+   ru/js/main.js
    ============================================================ */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -24,7 +24,270 @@ document.addEventListener("DOMContentLoaded", () => {
   const formStatus = document.getElementById("form-status");
 
   /* ==========================================================
-     02. HEADER ON SCROLL
+     02. HOMEPAGE VISUAL FIX
+     HERO ICONS + MARKET DIRECTIONS
+     ========================================================== */
+
+  const heroBenefitIcons = document.querySelectorAll(".hero-benefit__icon");
+
+  const heroIcons = [
+    `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3l7 3v5c0 4.8-2.9 8.1-7 10-4.1-1.9-7-5.2-7-10V6l7-3z"></path>
+        <path d="M9 12l2 2 4-5"></path>
+      </svg>
+    `,
+    `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M14.7 6.3a4 4 0 0 1-5 5L4 17l3 3 5.7-5.7a4 4 0 0 0 5-5l-3 3-3-3 3-3z"></path>
+      </svg>
+    `,
+    `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="5" y="3" width="14" height="18" rx="1"></rect>
+        <path d="M8 8h8"></path>
+        <path d="M8 12h8"></path>
+        <path d="M8 16h5"></path>
+      </svg>
+    `,
+    `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 7h11v10H3z"></path>
+        <path d="M14 10h4l3 3v4h-7z"></path>
+        <circle cx="7" cy="18" r="2"></circle>
+        <circle cx="18" cy="18" r="2"></circle>
+      </svg>
+    `,
+  ];
+
+  heroBenefitIcons.forEach((icon, index) => {
+    if (heroIcons[index]) {
+      icon.innerHTML = heroIcons[index];
+    }
+  });
+
+  const homepageVisualStyles = document.createElement("style");
+
+  homepageVisualStyles.id = "homepage-visual-fixes";
+
+  homepageVisualStyles.textContent = `
+    /* ========================================================
+       HERO BENEFITS
+       ======================================================== */
+
+    .hero-benefit {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr);
+      align-items: center;
+      column-gap: 16px;
+    }
+
+    .hero-benefit__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      flex: none;
+
+      width: 44px;
+      height: 44px;
+
+      color: var(--color-blue);
+    }
+
+    .hero-benefit__icon svg {
+      display: block;
+
+      width: 32px;
+      height: 32px;
+      max-width: none;
+
+      overflow: visible;
+
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .hero-benefit__text {
+      min-width: 0;
+
+      line-height: 1.35;
+    }
+
+
+    /* ========================================================
+       MARKET DIRECTIONS
+       ======================================================== */
+
+    .direction-card {
+      grid-template-columns:
+        96px minmax(0, 1fr) 28px;
+
+      align-items: center;
+
+      gap: 20px;
+    }
+
+    .direction-card__visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      flex: none;
+
+      width: 96px;
+      height: 96px;
+
+      overflow: hidden;
+
+      background: #e9eef3;
+    }
+
+    .direction-card__visual img {
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+      object-position: center;
+
+      transition: transform 260ms ease;
+    }
+
+    .direction-card:hover .direction-card__visual img {
+      transform: scale(1.035);
+    }
+
+    .direction-card__visual--icon {
+      color: var(--color-blue);
+      background: #e9eef3;
+    }
+
+    .direction-card__visual--icon svg {
+      display: block;
+
+      width: 48px;
+      height: 48px;
+      max-width: none;
+
+      overflow: visible;
+
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.35;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .direction-card__content {
+      min-width: 0;
+    }
+
+    .direction-card__arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 28px;
+      height: 28px;
+    }
+
+
+    /* ========================================================
+       TABLET
+       ======================================================== */
+
+    @media (min-width: 640px) {
+      .hero-benefit {
+        grid-template-columns:
+          44px minmax(0, 1fr);
+
+        column-gap: 16px;
+      }
+
+      .direction-card {
+        grid-template-columns:
+          96px minmax(0, 1fr) 28px;
+
+        gap: 22px;
+      }
+
+      .direction-card__visual {
+        width: 96px;
+        height: 96px;
+      }
+    }
+
+
+    /* ========================================================
+       DESKTOP
+       ======================================================== */
+
+    @media (min-width: 1024px) {
+      .hero-benefit {
+        grid-template-columns:
+          44px minmax(0, 1fr);
+
+        column-gap: 16px;
+      }
+
+      .hero-benefit__icon {
+        width: 44px;
+        height: 44px;
+      }
+
+      .hero-benefit__icon svg {
+        width: 32px;
+        height: 32px;
+      }
+
+      .direction-card {
+        grid-template-columns:
+          96px minmax(0, 1fr) 28px;
+
+        gap: 22px;
+      }
+
+      .direction-card__visual {
+        width: 96px;
+        height: 96px;
+      }
+
+      .direction-card__visual--icon svg {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  `;
+
+  document.head.appendChild(homepageVisualStyles);
+
+  /* ==========================================================
+     03. REPAIR LEASING DIRECTION SVG
+     ========================================================== */
+
+  const leasingDirectionIcon = document.querySelector(
+    ".direction-card__visual--icon",
+  );
+
+  if (leasingDirectionIcon) {
+    leasingDirectionIcon.innerHTML = `
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <rect x="10" y="5" width="28" height="38" rx="2"></rect>
+        <path d="M16 15h16"></path>
+        <path d="M16 22h16"></path>
+        <path d="M16 29h10"></path>
+        <path d="M30 35l3 3 6-7"></path>
+      </svg>
+    `;
+  }
+
+  /* ==========================================================
+     04. HEADER ON SCROLL
      ========================================================== */
 
   const updateHeader = () => {
@@ -46,7 +309,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ==========================================================
-     03. MOBILE MENU
+     05. MOBILE MENU
      ========================================================== */
 
   const openMobileMenu = () => {
@@ -59,7 +322,6 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle.classList.add("is-active");
 
     menuToggle.setAttribute("aria-expanded", "true");
-
     menuToggle.setAttribute("aria-label", "Закрыть меню");
 
     body.classList.add("menu-open");
@@ -75,7 +337,6 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle.classList.remove("is-active");
 
     menuToggle.setAttribute("aria-expanded", "false");
-
     menuToggle.setAttribute("aria-label", "Открыть меню");
 
     body.classList.remove("menu-open");
@@ -108,7 +369,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ==========================================================
-     04. CLOSE MOBILE MENU AFTER DESKTOP BREAKPOINT
+     06. CLOSE MOBILE MENU AFTER DESKTOP BREAKPOINT
      ========================================================== */
 
   const desktopMedia = window.matchMedia("(min-width: 1024px)");
@@ -122,15 +383,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (typeof desktopMedia.addEventListener === "function") {
     desktopMedia.addEventListener("change", handleDesktopChange);
   } else if (typeof desktopMedia.addListener === "function") {
-    /*
-      Fallback for older Safari versions.
-    */
-
     desktopMedia.addListener(handleDesktopChange);
   }
 
   /* ==========================================================
-     05. LANGUAGE DROPDOWN
+     07. LANGUAGE DROPDOWN
      ========================================================== */
 
   const openLanguageMenu = () => {
@@ -139,7 +396,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     languageMenu.hidden = false;
-
     languageButton.setAttribute("aria-expanded", "true");
   };
 
@@ -149,7 +405,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     languageMenu.hidden = true;
-
     languageButton.setAttribute("aria-expanded", "false");
   };
 
@@ -170,16 +425,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (languageButton && languageMenu) {
     languageButton.addEventListener("click", (event) => {
       event.stopPropagation();
-
       toggleLanguageMenu();
     });
 
     languageMenu.addEventListener("click", (event) => {
-      /*
-          Dzięki temu kliknięcie wewnątrz dropdownu
-          nie jest traktowane jako kliknięcie poza nim.
-        */
-
       event.stopPropagation();
     });
 
@@ -189,17 +438,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ==========================================================
-     06. ESCAPE KEY
+     08. ESCAPE KEY
      ========================================================== */
 
   document.addEventListener("keydown", (event) => {
     if (event.key !== "Escape") {
       return;
     }
-
-    /*
-        Language menu
-      */
 
     if (
       languageButton &&
@@ -209,10 +454,6 @@ document.addEventListener("DOMContentLoaded", () => {
       languageButton.focus();
     }
 
-    /*
-        Mobile menu
-      */
-
     if (menuToggle && menuToggle.getAttribute("aria-expanded") === "true") {
       closeMobileMenu();
       menuToggle.focus();
@@ -220,7 +461,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ==========================================================
-     07. INTERNAL ANCHORS
+     09. INTERNAL ANCHORS
      ========================================================== */
 
   const internalAnchorLinks = document.querySelectorAll(
@@ -262,10 +503,6 @@ document.addEventListener("DOMContentLoaded", () => {
         closeMobileMenu();
       }
 
-      /*
-          Aktualizacja URL bez przeładowania strony.
-        */
-
       if (window.history && typeof window.history.pushState === "function") {
         window.history.pushState(null, "", targetSelector);
       }
@@ -273,7 +510,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ==========================================================
-     08. ACTIVE NAVIGATION FOR HOMEPAGE SECTIONS
+     10. ACTIVE NAVIGATION FOR HOMEPAGE SECTIONS
      ========================================================== */
 
   const observedSections = [
@@ -341,7 +578,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ==========================================================
-     09. CONTACT FORM — HELPERS
+     11. CONTACT FORM — HELPERS
      ========================================================== */
 
   const setFormStatus = (message = "", type = "") => {
@@ -367,7 +604,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   /* ==========================================================
-     10. CONTACT FORM VALIDATION
+     12. CONTACT FORM VALIDATION
      ========================================================== */
 
   const validateContactForm = () => {
@@ -376,18 +613,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const name = contactForm.elements["name"];
-
     const city = contactForm.elements["city"];
-
     const email = contactForm.elements["email"];
-
     const phone = contactForm.elements["phone"];
-
     const privacy = contactForm.elements["privacy"];
-
-    /*
-      Required text fields.
-    */
 
     if (
       !getTrimmedValue(name) ||
@@ -400,10 +629,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return false;
     }
 
-    /*
-      Native email validation.
-    */
-
     if (email && !email.checkValidity()) {
       setFormStatus("Введите корректный адрес электронной почты.", "error");
 
@@ -411,11 +636,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       return false;
     }
-
-    /*
-      Simple phone validation.
-      We deliberately do not require a Polish number only.
-    */
 
     const phoneValue = getTrimmedValue(phone);
 
@@ -428,10 +648,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       return false;
     }
-
-    /*
-      Privacy consent.
-    */
 
     if (!privacy || !privacy.checked) {
       setFormStatus(
@@ -450,20 +666,11 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   /* ==========================================================
-     11. CONTACT FORM SUBMIT
+     13. CONTACT FORM SUBMIT
      ========================================================== */
 
   if (contactForm && formStatus) {
     contactForm.addEventListener("submit", (event) => {
-      /*
-          Na tym etapie formularz nie jest jeszcze
-          podłączony do n8n.
-
-          Zatrzymujemy wysyłkę, aby formularz
-          nie przeładowywał strony i nie udawał,
-          że lead został zapisany.
-        */
-
       event.preventDefault();
 
       setFormStatus();
@@ -474,40 +681,11 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      /*
-          ======================================================
-          N8N WEBHOOK
-
-          Tutaj w następnym etapie podłączymy:
-
-          const WEBHOOK_URL =
-            "https://...";
-
-          const payload = {
-            name: ...,
-            city: ...,
-            email: ...,
-            phone: ...,
-            salon: ...,
-            message: ...,
-            page: window.location.href,
-            formType: "lts-market-contact"
-          };
-
-          await fetch(WEBHOOK_URL, {...});
-
-          ======================================================
-        */
-
       setFormStatus(
         "Отправка через сайт пока недоступна. Напишите на sales@ltsmarket.pl или позвоните +48 575 254 431.",
         "info",
       );
     });
-
-    /*
-      Clear old error after user changes a field.
-    */
 
     contactForm.addEventListener("input", () => {
       if (formStatus && formStatus.classList.contains("is-error")) {
@@ -517,7 +695,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ==========================================================
-     13. EXTERNAL LINKS
+     14. EXTERNAL LINKS
      ========================================================== */
 
   const externalLinks = document.querySelectorAll('a[href^="http"]');
@@ -535,14 +713,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    /*
-      Laser Tech Service pozostaje normalnym linkiem.
-      Nie wymuszamy nowej karty.
-
-      target="_blank" ustawiamy tylko wtedy,
-      gdy jest już określony w HTML.
-    */
-
     if (link.getAttribute("target") === "_blank") {
       const currentRel = link.getAttribute("rel") || "";
 
@@ -556,7 +726,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ==========================================================
-     14. INITIAL HASH
+     15. INITIAL HASH
      ========================================================== */
 
   const scrollToInitialHash = () => {
@@ -575,13 +745,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!target) {
       return;
     }
-
-    /*
-      Browser często przewija hash przed pełnym
-      załadowaniem layoutu.
-
-      Po DOMContentLoaded korygujemy pozycję.
-    */
 
     window.requestAnimationFrame(() => {
       target.scrollIntoView({
